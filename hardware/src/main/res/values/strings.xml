@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">relayr toilet</string>
+
+    <string name="hello">Hello %s!</string>
+
+    <string name="action_log_in">Log in</string>
+    <string name="action_log_out">Log out</string>
+    <string name="successfully_logged_in">You were successfully logged in!</string>
+    <string name="successfully_logged_out">You were successfully logged out!</string>
+    <string name="unsuccessfully_logged_in">There was a problem in the log in.</string>
+
+    <string name="free">It\'s freee! Run!</string>
+    <string name="occupied">Sorry, someone is already having fun.</string>
+
+    <string name="problem_no_device">Device doesn\'t exist</string>
+    <string name="problem_loading_user">Problem loading user data</string>
+    <string name="problem_loading_device_data">Problem loading device data</string>
+    <string name="problem_loading_data">Problem loading data</string>
+</resources>

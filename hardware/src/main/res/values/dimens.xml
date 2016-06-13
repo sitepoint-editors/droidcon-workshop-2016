@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="margins">16dp</dimen>
+    <dimen name="text">20sp</dimen>
+    <dimen name="graph">150dp</dimen>
+</resources>
