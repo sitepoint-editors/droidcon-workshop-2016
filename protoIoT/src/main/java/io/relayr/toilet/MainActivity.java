@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
         if (!RelayrSdk.isUserLoggedIn()) logIn();
     }
 
-
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         menu.clear();

@@ -114,11 +114,14 @@ public class TabCurrent extends Fragment {
                     }
 
                     @Override public void onNext(Reading reading) {
-                        if (reading.meaning.equals("digital0"))
+                        if (reading.meaning.equals("digital0")) {
+                            Log.e("LOCK", "" + reading.value);
                             mStateDoor = (Boolean) reading.value;
-
-                        if (reading.meaning.equals("magnetometer"))
+                        }
+                        if (reading.meaning.equals("magnetometer")) {
+                            Log.e("MAG", "" + ((Number) reading.value).floatValue());
                             mStatePresence = ((Number) reading.value).floatValue() > 200f;
+                        }
 
                         showToiletState();
                     }
