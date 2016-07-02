@@ -1,4 +1,4 @@
-package io.relayr.toilet;
+package io.relayr.catwatch;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -11,14 +11,12 @@ import android.widget.Toast;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import io.relayr.android.RelayrSdk;
-import io.relayr.hardware.R;
 import io.relayr.java.model.User;
+import io.relayr.catwatch.proto.R;
 import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
 
 public class MainActivity extends AppCompatActivity {
-
-    public static final String DEVICE_ID = "515d08f2-715d-4713-b3d3-3c19843e0ebb";
 
     @InjectView(R.id.tab_layout) TabLayout tabLayout;
     @InjectView(R.id.pager) ViewPager viewPager;
@@ -29,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.inject(this);
 
-        tabLayout.addTab(tabLayout.newTab().setText("Toilet"));
+        tabLayout.addTab(tabLayout.newTab().setText("Cat Watch"));
         tabLayout.addTab(tabLayout.newTab().setText("History"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
@@ -52,14 +50,12 @@ public class MainActivity extends AppCompatActivity {
         if (!RelayrSdk.isUserLoggedIn()) logIn();
     }
 
-
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         menu.clear();
-        if (RelayrSdk.isUserLoggedIn())
-            getMenuInflater().inflate(R.menu.demo_logged_in, menu);
-        else
-            getMenuInflater().inflate(R.menu.demo_not_logged_in, menu);
+
+        if (RelayrSdk.isUserLoggedIn()) getMenuInflater().inflate(R.menu.demo_logged_in, menu);
+        else getMenuInflater().inflate(R.menu.demo_not_logged_in, menu);
 
         return super.onPrepareOptionsMenu(menu);
     }

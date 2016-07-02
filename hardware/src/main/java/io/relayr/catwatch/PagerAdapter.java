@@ -1,4 +1,4 @@
-package io.relayr.toilet;
+package io.relayr.catwatch;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

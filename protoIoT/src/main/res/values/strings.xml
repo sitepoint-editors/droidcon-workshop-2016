@@ -9,8 +9,8 @@
     <string name="successfully_logged_out">You were successfully logged out!</string>
     <string name="unsuccessfully_logged_in">There was a problem in the log in.</string>
 
-    <string name="free">It\'s freee! Run!</string>
-    <string name="occupied">Sorry, someone is already having fun.</string>
+    <string name="innocence">What?</string>
+    <string name="evil">Ha!Ha! You lose!</string>
 
     <string name="problem_no_device">Device doesn\'t exist</string>
     <string name="problem_loading_user">Problem loading user data</string>

@@ -1,4 +1,4 @@
-package io.relayr.toilet;
+package io.relayr.catwatch;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -27,9 +27,8 @@ import io.relayr.java.model.AccelGyroscope;
 import io.relayr.java.model.history.History;
 import io.relayr.java.model.history.HistoryPoint;
 import io.relayr.java.model.history.HistoryResult;
-import io.relayr.toilet.proto.R;
+import io.relayr.catwatch.proto.R;
 import rx.Observable;
-import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
 
 public class TabHistory extends Fragment {

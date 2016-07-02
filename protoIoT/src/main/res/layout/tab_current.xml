@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_margin="0dp"
-        android:src="@drawable/man_running"/>
+        android:src="@drawable/cat_warning"/>
 
     <TextView
         android:id="@+id/state"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="0dp"
         android:gravity="center_horizontal"
-        android:text="@string/free"
+        android:text="@string/innocence"
         android:textColor="@color/colorAccent"
         android:textSize="@dimen/text"/>
 </LinearLayout>

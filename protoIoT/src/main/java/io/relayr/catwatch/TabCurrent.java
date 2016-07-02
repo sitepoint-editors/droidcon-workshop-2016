@@ -1,4 +1,4 @@
-package io.relayr.toilet;
+package io.relayr.catwatch;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -24,7 +24,7 @@ import io.relayr.java.model.Device;
 import io.relayr.java.model.User;
 import io.relayr.java.model.action.Command;
 import io.relayr.java.model.action.Reading;
-import io.relayr.toilet.proto.R;
+import io.relayr.catwatch.proto.R;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.subscriptions.Subscriptions;
@@ -120,18 +120,8 @@ public class TabCurrent extends Fragment {
                     @Override public void success(Reading reading) {
                         if (reading.meaning.equals("acceleration")) {
                             final AccelGyroscope.Acceleration accel = mGson.fromJson(reading.value.toString(), AccelGyroscope.Acceleration.class);
-                            showToiletState(Math.abs(accel.x) > 6);
+                            showCatState(Math.abs(accel.x) > 6);
                         }
-
-                        // Example of other readings
-                        //if (reading.meaning.equals("angularSpeed")) {
-                        //    final AccelGyroscope.AngularSpeed gyro = mGson.fromJson(reading.value.toString(), AccelGyroscope.AngularSpeed.class);
-                        //}
-                        //if (reading.meaning.equals("luminosity")) {}
-                        //if (reading.meaning.equals("touch")) {}
-                        //if (reading.meaning.equals("location")) {}
-                        //if (reading.meaning.equals("rssi")) {}
-                        //if (reading.meaning.equals("batteryLevel")) {}
                     }
                 });
     }
@@ -154,9 +144,9 @@ public class TabCurrent extends Fragment {
                 });
     }
 
-    private void showToiletState(boolean current) {
-        mStateImg.setImageResource(current ? R.drawable.man_sitting : R.drawable.man_running);
-        mStateText.setText(current ? R.string.occupied : R.string.free);
+    private void showCatState(boolean current) {
+        mStateImg.setImageResource(current ? R.drawable.cat_won : R.drawable.cat_warning);
+        mStateText.setText(current ? R.string.evil : R.string.innocence);
     }
 
     private void unSubscribeAll() {
